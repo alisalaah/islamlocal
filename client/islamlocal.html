@@ -1,0 +1,53 @@
+<head>
+	<title>IslamLocal | local prayer times, masjids, news, and more!</title>
+</head>
+
+<body>
+</body>
+
+<template name="layout">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{pathFor 'home'}}">IslamLocal</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+				{{#if currentUser}}
+                <ul class="nav navbar-nav">
+                    <li><a href="{{pathFor 'profile'}}">Profile</a></li>
+                </ul>
+				{{/if}}
+				<ul class="nav navbar-nav navbar-right">
+					{{> loginButtons}} <!-- here -->
+				</ul>
+            </div>
+            <!-- /.navbar-collapse -->
+
+        </div>
+        <!-- /.container -->
+    </nav>
+	{{> yield}}
+</template>
+
+<template name="notFound">
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<legend>Page not found</legend>
+				<p>The page you were looking for was not found.  To go to the home page click "us-Sunnah Foundation" in the menu.</p>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="loading">
+	<img src="/ajax-loader.gif" style="display:block; margin: 200px auto 0"/>
+</template>

@@ -1,0 +1,19 @@
+{
+	"packages": {
+		"iron-router": {},
+		"googlemaps": {},
+		"praytimes": {},
+		"bootstrap-3": {},
+		"accounts-ui-bootstrap-3": {},
+		"accounts-meld": {},
+		"roles": {},
+		"accounts-admin-ui-bootstrap-3": {},
+		"event-hooks": {},
+		"autoform": {},
+		"bootboxjs": {},
+		"jquery-validation": {},
+		"hogan": {},
+		"typeahead": {},
+		"jquery.autocomplete": {}
+	}
+}

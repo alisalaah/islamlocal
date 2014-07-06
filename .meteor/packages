@@ -1,0 +1,25 @@
+# Meteor packages used by this project, one per line.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+standard-app-packages
+accounts-facebook
+accounts-google
+accounts-twitter
+service-configuration
+iron-router
+googlemaps
+praytimes
+bootstrap-3
+accounts-ui-bootstrap-3
+accounts-meld
+roles
+accounts-admin-ui-bootstrap-3
+event-hooks
+autoform
+bootboxjs
+jquery-validation
+hogan
+typeahead
+jquery.autocomplete

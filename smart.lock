@@ -1,0 +1,119 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "iron-router": {},
+      "googlemaps": {},
+      "praytimes": {},
+      "bootstrap-3": {},
+      "accounts-ui-bootstrap-3": {},
+      "accounts-meld": {},
+      "roles": {},
+      "accounts-admin-ui-bootstrap-3": {},
+      "event-hooks": {},
+      "autoform": {},
+      "bootboxjs": {},
+      "jquery-validation": {},
+      "hogan": {},
+      "typeahead": {},
+      "jquery.autocomplete": {}
+    },
+    "packages": {
+      "iron-router": {
+        "git": "https://github.com/EventedMind/iron-router.git",
+        "tag": "v0.7.1",
+        "commit": "d1ffb3f06ea4c112132b030f2eb1a70b81675ecb"
+      },
+      "googlemaps": {
+        "git": "https://github.com/drewjw81/meteor-googlemaps.git",
+        "tag": "v0.0.2",
+        "commit": "da8785c82cfd7de0111f898ef10728e7ed24e361"
+      },
+      "praytimes": {
+        "git": "https://github.com/alisalaah/meteor-praytimes.git",
+        "tag": "v1.0.2",
+        "commit": "e02425ade7478d96f7ec698992ee1bdbd74b3414"
+      },
+      "bootstrap-3": {
+        "git": "https://github.com/mangasocial/meteor-bootstrap-3.git",
+        "tag": "v3.1.1-1",
+        "commit": "63dd38968828bb8963636df93e9a1c45e2dfe67e"
+      },
+      "accounts-ui-bootstrap-3": {
+        "git": "https://github.com/mangasocial/meteor-accounts-ui-bootstrap-3.git",
+        "tag": "v0.3.0-1",
+        "commit": "93ffa5d0e325dc7026de89f6d90c178fa04bdd3a"
+      },
+      "accounts-meld": {
+        "git": "https://github.com/splendido/meteor-accounts-meld.git",
+        "tag": "v1.1.1",
+        "commit": "51232d314f41dc8ef09c8b1963d4c1648f6702c3"
+      },
+      "roles": {
+        "git": "https://github.com/alanning/meteor-roles.git",
+        "tag": "v1.2.10",
+        "commit": "7ccb35de0a6cb0c9a0c3666badd04757e39c09a6"
+      },
+      "accounts-admin-ui-bootstrap-3": {
+        "git": "https://github.com/hharnisc/meteor-accounts-admin-ui-bootstrap-3.git",
+        "tag": "v0.2.6",
+        "commit": "fe74692303daf73d440f2729010bcf1557af62ca"
+      },
+      "event-hooks": {
+        "git": "https://github.com/BenjaminRH/meteor-event-hooks.git",
+        "tag": "v1.4.3",
+        "commit": "ba4f3d7887748458618d29615492906f0c88d31c"
+      },
+      "autoform": {
+        "git": "https://github.com/aldeed/meteor-autoform.git",
+        "tag": "v0.13.5",
+        "commit": "27dd5b912eeba687b228a6a7c2c14eef63b12cca"
+      },
+      "bootboxjs": {
+        "git": "https://github.com/TimHeckel/meteor-bootboxjs.git",
+        "tag": "v4.2.0",
+        "commit": "2b7d18ad028d9e7b37238ecf2a8a7970735cebd1"
+      },
+      "jquery-validation": {
+        "git": "https://github.com/properapp/jquery-validation.git",
+        "tag": "v1.0.0",
+        "commit": "afce6a53368c4f35f3bd82d92572312db68ecbb7"
+      },
+      "hogan": {
+        "git": "https://github.com/alisalaah/meteor-hogan.git",
+        "tag": "v1.0.1",
+        "commit": "2c603526d7af0c0b6560bbffbe794a31e7d668aa"
+      },
+      "typeahead": {
+        "git": "https://github.com/sergeyt/meteor-typeahead.git",
+        "tag": "v0.0.10",
+        "commit": "fe0bb03aea8493037de134d815f9663feb21a944"
+      },
+      "jquery.autocomplete": {
+        "git": "https://github.com/kidovate/meteor-jquery.autocomplete.git",
+        "tag": "v1.2.9",
+        "commit": "a0490281cd3fdc7196093350fa38f9180a4460f5"
+      },
+      "blaze-layout": {
+        "git": "https://github.com/EventedMind/blaze-layout.git",
+        "tag": "v0.2.4",
+        "commit": "b40e9b0612329288d75cf52ad14a7da64bb8618f"
+      },
+      "simple-schema": {
+        "git": "https://github.com/aldeed/meteor-simple-schema.git",
+        "tag": "v0.5.1",
+        "commit": "a29956b34d03a4591dbd0eaed9d37009ef48b8db"
+      },
+      "collection2": {
+        "git": "https://github.com/aldeed/meteor-collection2.git",
+        "tag": "v0.4.2",
+        "commit": "4ff4b707bec8be434919730bf101325adb215444"
+      },
+      "moment": {
+        "git": "https://github.com/acreeger/meteor-moment.git",
+        "tag": "v2.6.0",
+        "commit": "26156df681750fd6e6ed77043eef32b6653ebbdf"
+      }
+    }
+  }
+}

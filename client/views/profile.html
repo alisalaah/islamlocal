@@ -1,0 +1,209 @@
+<template name="profile">
+	<div class="container buffer">
+		<div class="row">
+			<div class="col-md-6">
+				<form id="updateProfile" class="form-horizontal">
+					<fieldset>
+
+						<!-- Form Name -->
+						<legend>Edit Profile</legend>
+
+						<!-- Text input-->
+						<div class="form-group buffer">
+							<label class="col-md-4 control-label" for="name">Name</label>  
+							<div class="col-md-6">
+								<input id="firstName" name="name" type="text" value="{{getName}}" class="form-control input-md" required="">
+
+							</div>
+						</div>
+
+						<!-- Text input-->
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="email">Email</label>  
+							<div class="col-md-6">
+								<input id="email" name="email" type="email" value="{{getEmail}}" class="form-control input-md" required="">
+
+							</div>
+						</div>
+
+						<!-- Multiple Radios (inline) -->
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="loctoggle"></label>
+							<div id="loctoggle" class="col-md-4"> 
+								<label class="radio-inline" for="loctoggle-0">
+									<input type="radio" name="loctoggle" id="loctoggle-0" value="auto" {{getIfAuto}}>
+									Auto
+								</label> 
+								<label class="radio-inline" for="loctoggle-1">
+									<input type="radio" name="loctoggle" id="loctoggle-1" value="manual" {{getIfManual}}>
+									Manual
+								</label>
+							</div>
+						</div>
+						
+						<!-- Text input-->
+						<div class="form-group" id="manloc" style="display:none">
+							<label class="col-md-4 control-label" for="locman">Location</label>  
+							<div class="col-md-6">
+								<input name="locman" type="text" class="typeahead form-control input-md"
+									data-source="http://api.geonames.org/searchJSON?q=%QUERY&maxRows=10&username=uberboomtest&lang=de&style=full"
+									data-template="geoname" autocomplete="off" spellcheck="off">
+							</div>
+						</div>
+
+						<!-- Text input-->
+						<div class="form-group" id="autoloc">
+							<label class="col-md-4 control-label" for="locauto">Location</label>  
+							<div class="col-md-6">
+								<input id="locauto" name="locauto" type="text" value="{{displayGPS}}" class="form-control input-md" required="" disabled>
+
+							</div>
+						</div>
+
+						<!-- Text input-->
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="notradius">Notification Radius</label>  
+							<div class="col-md-3">
+								<input id="notradius" name="notradius" min="0" max="100" type="text" value="{{getRadius}}" class="form-control input-md" required="">
+							</div>
+							<label class="col-md-4 control-label" for="notunits"></label>
+							<div class="col-md-4"> 
+								<label class="radio-inline" for="notunits-0">
+									<input type="radio" name="notunits" id="notunits-0" value="km" {{getIfKM}}>km
+								</label> 
+								<label class="radio-inline" for="notunits-1">
+									<input type="radio" name="notunits" id="notunits-1" value="mi" {{getIfMI}}>mi
+								</label>
+							</div>
+						</div>
+
+						<!-- Multiple Checkboxes -->
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="notifications">Notifications</label>
+							<div class="col-md-4">
+								<div class="checkbox">
+									<label for="notifications-1">
+										<input type="checkbox" name="notifications" id="notifications-1" value="janazahs" {{notJanazahs}}>
+										Janazahs
+									</label>
+								</div>
+								<div class="checkbox">
+									<label for="notifications-2">
+										<input type="checkbox" name="notifications" id="notifications-2" value="aqiqahs" {{notAqiqahs}}>
+										Aqiqahs
+									</label>
+								</div>
+								<div class="checkbox">
+									<label for="notifications-3">
+										<input type="checkbox" name="notifications" id="notifications-3" value="classes" {{notClasses}}>
+										Classes
+									</label>
+								</div>
+							</div>
+						</div>
+
+						<!-- Button -->
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="finish"></label>
+							<div class="col-md-4">
+								<button id="save" name="save" class="btn btn-primary">Update</button> &nbsp; 
+								<button id="finish" name="finish" class="btn btn-secondary">Finish</button>
+							</div>
+						</div>
+
+					</fieldset>
+				</form>
+			</div>
+			<div class="col-md-6">
+				<form id="previewProfile" class="form-horizontal">
+					<fieldset style="background-color: #ddd">
+
+						<!-- Form Name -->
+						<legend style="background-color: #fff">Current Profile <small>(live)</small></legend>
+
+						<!-- Text input-->
+						<div class="form-group buffer">
+							<label class="col-md-4 control-label" for="name">Name</label>  
+							<div class="col-md-6">
+								<input id="showName" type="text" value="{{profile.name}}" class="form-control input-md" disabled>
+
+							</div>
+						</div>
+
+						<!-- Text input-->
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="email">Email</label>  
+							<div class="col-md-6">
+								<input id="showEmail" type="email" value="{{profile.email}}" class="form-control input-md" disabled>
+
+							</div>
+						</div>
+
+						<!-- Multiple Radios (inline) -->
+						<div class="form-group">
+							<label class="col-md-4 control-label"></label>
+							<div class="col-md-8"> 
+								<p style="margin:5px 0 0 0">{{profile.city}} - {{profile.country}}</p>
+							</div>
+						</div>
+
+						<!-- Text input-->
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="loc">Location</label>  
+							<div class="col-md-6">
+								<input type="text" value="{{profile.location}} {{showIfAuto}}" class="form-control input-md" disabled>
+
+							</div>
+						</div>
+
+						<!-- Text input-->
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="notradius">Notification Radius</label>  
+							<div class="col-md-6">
+								<input type="text" value="{{showRadius}}" class="form-control input-md" disabled>
+							</div>
+						</div>
+
+						<!-- Multiple Checkboxes -->
+						<div class="form-group">
+							<label class="col-md-4 control-label">Notifications</label>
+							<div class="col-md-4">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" {{notJanazahs}} disabled>
+										Janazahs
+									</label>
+								</div>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" {{notAqiqahs}} disabled>
+										Aqiqahs
+									</label>
+								</div>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" {{notClasses}} disabled>
+										Classes
+									</label>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Button -->
+						<div class="form-group">
+							<label class="col-md-4 control-label"></label>
+							<div class="col-md-4">
+							</div>
+						</div>
+						
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="geoname">
+	<p class="geo-name">{{name}}</p>
+	<p class="geo-country text-muted">{{countryName}}</p>
+</template>
